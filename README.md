@@ -1,8 +1,11 @@
-# Invoice Query Processor project (V1.0)
+# Invoice Query Processor project (V1.1)
 ## About 🌟
 A small personal project testing Google's GenAI Gemini LLM, inpired by multiple tutorials.
 Allows QnA answering Invoice related queries.
-More features will be added periodically (accept PDF files, multi-image next?)
+More features will be added periodically (multi-page and history next?)
+
+## Latest Update !!
++ Invoices in PDF format is now accepted
 
 ## Pre-requisite 🛠️
 + Python version >= 3.9 && <=3.11
