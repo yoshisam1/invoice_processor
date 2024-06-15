@@ -14,13 +14,15 @@ You can access the deployed version on the following link:
 
 But if you want to try setting up the project on your local machine is a breeze! Follow these steps:
 
-1. **Clone the Repository**: Execute the following command in your terminal:
+1. **Clone the Repository**: 
+Execute the following command in your terminal:
     ```bash
     git clone https://github.com/yoshisam1/invoice_processor.git
     ```
 
 2. **Install Dependencies**:
 Ensure you have the latest versions of pip and brew installed. If not, run the following commands:
+    
     ```bash
     curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
     python get-pip.py
