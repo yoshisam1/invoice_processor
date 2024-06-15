@@ -22,11 +22,12 @@ Execute the following command in your terminal:
 
 2. **Install Dependencies**:
 Ensure you have the latest versions of pip and brew installed. If not, run the following commands:
-    
+    PIP
     ```bash
     curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
     python get-pip.py
     ```
+    Homebrew
     ```bash
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
     ```
