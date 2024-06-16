@@ -76,7 +76,6 @@ input_prompt = "You are an expert in understanding invoices. We will upload an i
 if submit:
     try:
         image_data = input_image_details(uploaded_file)
-        st.write(image_data)
         response = get_gemini_response(input_prompt, image_data, input)
         st.subheader("The response is")
         st.write(response)
