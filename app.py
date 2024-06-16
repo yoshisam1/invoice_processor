@@ -55,22 +55,31 @@ def input_image_details(uploaded_file):
 # Setup streamlit
 st.set_page_config(page_title="Invoice Extractor")
 
-st.header("Invoice Extractor")
-input = st.text_input("Input Prompt: ", key = "input")
-uploaded_file = st.file_uploader("Choose an image of the invoice...", type = ["jpg", "jpeg", "png", "pdf"])
-image = ""
-if uploaded_file is not None:
-  if uploaded_file.type == "application/pdf":
-    pages = convert_from_bytes(uploaded_file.getvalue())
-    image = pages[0]  # Display the first page of the PDF
-    st.image(image, caption="Uploaded PDF Image.", use_column_width=True)
-  else:
-    image = Image.open(uploaded_file)
-    st.image(image, caption="Uploaded Image.", use_column_width=True)
+st.header("Bill/Invoice Extractor QnA")
 
+# Placeholder for the image
+image_placeholder = st.empty()
+
+# File uploader
+uploaded_file = st.file_uploader("Choose an image of the invoice...", type=["jpg", "jpeg", "png", "pdf"])
+
+# Display the uploaded image immediately
+if uploaded_file is not None:
+    if uploaded_file.type == "application/pdf":
+        pages = convert_from_bytes(uploaded_file.getvalue())
+        image = pages[0]  # Display the first page of the PDF
+        image_placeholder.image(image, caption="Uploaded PDF Image.", use_column_width=True)
+    else:
+        image = Image.open(uploaded_file)
+        image_placeholder.image(image, caption="Uploaded Image.", use_column_width=True)
+
+
+input = st.text_input("Your Question: ", key = "input")
 submit = st.button("Get Answer")
 
-input_prompt = "You are an expert in understanding invoices. We will upload an image as an invoice and you will have to answer any questions based on the uploaded invoice image"
+input_prompt = """You are an expert in understanding invoices. We will upload an image as an invoice and you will have to answer any questions only based on the uploaded invoice image. 
+                  Questions unrelated to the invoice should be rejected, and an error message should be raised.
+                  If there are no image attached or the attached image is not an invoice, you should raise an error message as well."""
 
 # If submit button is clicked
 if submit:
