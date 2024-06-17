@@ -1,4 +1,4 @@
-# Invoice Query Processor project (V1.1)
+# Invoice QnA bot project (V1.1)
 ## About 🌟
 A small personal project testing Google's GenAI Gemini LLM, inpired by multiple tutorials.
 Allows QnA answering Invoice related queries.
