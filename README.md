@@ -54,5 +54,7 @@ Finally, run streamlit on localhost using the following:
     ```
     streamlit run app.py
     ```
-
 Now, you're all set to explore and interact with the project right on your local machine!
+
+5. **Upload Invoice**:
+You can either use the sample invoice provided in example_invoices folder or upload your own.

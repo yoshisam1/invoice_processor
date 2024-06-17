@@ -55,7 +55,7 @@ def input_image_details(uploaded_file):
 # Setup streamlit
 st.set_page_config(page_title="Invoice Extractor")
 
-st.header("Bill/Invoice Extractor QnA")
+st.header("Bill/Invoice Extractor QnA (V1.2)") # Make into logo?
 
 # Placeholder for the image
 image_placeholder = st.empty()
